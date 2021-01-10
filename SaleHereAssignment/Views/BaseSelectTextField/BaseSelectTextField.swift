@@ -47,6 +47,7 @@ class BaseSelectTextField: UIView {
     private func setUpInputField() {
         self.inputField.tintColor = #colorLiteral(red: 0.7905176878, green: 0.3638026416, blue: 0.2900270522, alpha: 1)
         self.inputField.font = UIFont.systemFont(ofSize: 20.0, weight: .medium)
+        self.inputField.autocorrectionType = .no
     }
     
     @objc func focusTextField() {
