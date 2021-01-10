@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17701"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BaseProgress" customModule="SaleHereAssignment" customModuleProvider="target">
+            <connections>
+                <outlet property="bgProgressView" destination="f3b-Gy-OSs" id="5fv-qX-yFF"/>
+                <outlet property="contentView" destination="EAO-yT-9tb" id="AfO-qH-u1k"/>
+                <outlet property="progressBar" destination="33g-AP-K0g" id="AWu-x6-wKf"/>
+                <outlet property="progressBarConstraintLeft" destination="Qbd-JI-C86" id="4MQ-ub-hcF"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="EAO-yT-9tb" userLabel="Content View">
+            <rect key="frame" x="0.0" y="0.0" width="566" height="59"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f3b-Gy-OSs">
+                    <rect key="frame" x="16" y="21.5" width="534" height="16"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="33g-AP-K0g">
+                            <rect key="frame" x="0.0" y="0.0" width="534" height="16"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="16" id="BRF-9q-X7b"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.2196078431372549" green="0.2196078431372549" blue="0.2196078431372549" alpha="0.14999999999999999" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="33g-AP-K0g" firstAttribute="leading" secondItem="f3b-Gy-OSs" secondAttribute="leading" id="PuI-HA-QCF"/>
+                        <constraint firstAttribute="trailing" secondItem="33g-AP-K0g" secondAttribute="trailing" priority="750" id="Qbd-JI-C86"/>
+                        <constraint firstItem="33g-AP-K0g" firstAttribute="centerY" secondItem="f3b-Gy-OSs" secondAttribute="centerY" id="Vl2-uQ-m5l"/>
+                        <constraint firstAttribute="height" constant="16" id="fRn-tv-UTP"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="f3b-Gy-OSs" secondAttribute="trailing" constant="16" id="2sR-Wo-dzL"/>
+                <constraint firstItem="f3b-Gy-OSs" firstAttribute="centerY" secondItem="EAO-yT-9tb" secondAttribute="centerY" id="SIk-hQ-kh2"/>
+                <constraint firstItem="f3b-Gy-OSs" firstAttribute="leading" secondItem="EAO-yT-9tb" secondAttribute="leading" constant="16" id="moF-GR-Otq"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="1899.2" y="-333.28335832083962"/>
+        </view>
+    </objects>
+</document>

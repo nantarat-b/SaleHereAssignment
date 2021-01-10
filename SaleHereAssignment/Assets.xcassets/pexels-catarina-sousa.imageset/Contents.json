@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "pexels-catarina-sousa.jpg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

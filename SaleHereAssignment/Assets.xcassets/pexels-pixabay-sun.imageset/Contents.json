@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "pexels-pixabay-sun.jpg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "pexels-nicolas-postiglioni.jpg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
