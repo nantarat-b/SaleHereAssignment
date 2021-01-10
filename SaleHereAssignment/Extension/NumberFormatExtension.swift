@@ -8,10 +8,19 @@
 
 import Foundation
 
-extension NSNumber {
-    public func formattedNumberString(minimumFractionDigits: Int, maximumFractionDigits: Int) -> String {
-        return formattedNumberString(minimumFractionDigits: minimumFractionDigits,
-                                     maximumFractionDigits: maximumFractionDigits,
-                                     showSign: false)
+extension Float {
+    public func formattedString(minimumFractionDigits: Int, maximumFractionDigits: Int) -> String {
+        let formatter = NumberFormatter()
+        formatter.minimumFractionDigits = minimumFractionDigits
+        formatter.maximumFractionDigits = maximumFractionDigits
+        formatter.minimumIntegerDigits = 1
+        formatter.locale = Locale(identifier: "en_EN")
+        formatter.numberStyle = .decimal
+        
+        let number: NSNumber = NSNumber(value: self)
+        if let formattedString = formatter.string(from: number) {
+            return formattedString
+        }
+        return ""
     }
 }

@@ -9,5 +9,11 @@
 import UIKit
 
 struct AchievementViewModel {
+    let iconImage: String
+    let title: String
+}
 
+struct AchievementModel {
+    let iconImage: String
+    let title: String
 }

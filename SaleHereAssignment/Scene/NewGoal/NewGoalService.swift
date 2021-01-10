@@ -7,31 +7,19 @@
 //
 
 import UIKit
-import TakoBase
 
 class NewGoalService {
 
-    /*
-    *if fail, return error code
-    *if success, transform to models (raw)
-    */
- 
     // MARK: - Calling API Manager
-    func doSomeWork(success: @escaping (Any) -> (), fail: @escaping (_ error: String?) -> ()) {
-
-        // TODO: Do the work
-        let api = APIManager.init(endpoint: "",
-                                  method: .get)
-        api.call(parameters: [:],
-                 headersAdditional: [:],
-                 encoding: nil,
-                 fail: { (error) in
-                    fail("error")
-        }) { (json) in
-            if (json["code"].string == "success") {
-                // TODO: Format the response from the Api and pass the result back to the Presenter
-                success("")
-            }
-        }
+    func getGoalList(success: @escaping ([NewGoalListModel]) -> (), fail: @escaping (_ error: String?) -> ()) {
+        let dataMock: [NewGoalListModel] = [
+            NewGoalListModel(iconImage: "ic-travel", title: "Travel"),
+            NewGoalListModel(iconImage: "ic-education", title: "Education"),
+            NewGoalListModel(iconImage: "ic-invest", title: "Invest"),
+            NewGoalListModel(iconImage: "ic-clothing", title: "Clothing"),
+            NewGoalListModel(iconImage: "ic-other", title: "Other")
+        ]
+        success(dataMock)
     }
+
 }

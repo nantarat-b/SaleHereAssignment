@@ -9,11 +9,11 @@
 import UIKit
 
 protocol AchievementRouter: NSObjectProtocol {
-    func navigateToViewController()
+    
 }
 
 protocol AchievementView: BaseView {
-    func displaySomething(displayModel: AchievementViewModel)
+    func displayAchievementList(displayModel: [AchievementViewModel])
 }
 
 class AchievementPresenter {
@@ -34,10 +34,15 @@ class AchievementPresenter {
         self.view = view
     }
     
-    func getSomething() {
-        // TODO: Format the response from the Service and pass the result back to the View Controller
-        let viewModel = AchievementViewModel()
-        view.displaySomething(displayModel: viewModel)
+    func getAchievement() {
+        self.service.getAchievement { (achievementModel) in
+            let achievementViewModel = achievementModel.map { (item) -> AchievementViewModel in
+                return AchievementViewModel(iconImage: item.iconImage, title: item.title)
+            }
+            self.view.displayAchievementList(displayModel: achievementViewModel)
+        } fail: { (error) in
+            
+        }
     }
 }
 

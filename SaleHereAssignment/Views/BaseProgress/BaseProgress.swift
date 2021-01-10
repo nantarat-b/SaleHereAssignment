@@ -48,12 +48,11 @@ public class BaseProgress: UIView {
         
         self.progressBar.backgroundColor = #colorLiteral(red: 0.78613168, green: 0.364203155, blue: 0.2807894945, alpha: 1)
         self.progressBar.clipsToBounds = true
-        self.progressBar.layer.cornerRadius = self.progressBar.frame.height / 2.0
     }
     
     public func setPercent(value percent: CGFloat = 0.0) {
         self.fPercent = percent
-        self.progressBarConstraintLeft.constant = self.bgProgressView.frame.width - min(max(percent, 0.0), 1.0) * (self.bgProgressView.frame.width - 3.0)
+        self.progressBarConstraintLeft.constant = self.bgProgressView.frame.width - min(max(percent, 0.0), 1.0) * self.bgProgressView.frame.width
     }
 }
 

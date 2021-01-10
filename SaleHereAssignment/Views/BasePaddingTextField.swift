@@ -10,12 +10,14 @@ import UIKit
 
 class BasePaddingTextField: UITextField {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    let padding = UIEdgeInsets(top: 8, left: 16, bottom: 8, right: 16)
+    
+    override public func textRect(forBounds bounds: CGRect) -> CGRect {
+        return bounds.inset(by: padding)
     }
-    */
+    
+    override public func editingRect(forBounds bounds: CGRect) -> CGRect {
+        return bounds.inset(by: padding)
+    }
 
 }

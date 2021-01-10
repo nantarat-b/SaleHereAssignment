@@ -21,13 +21,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f3b-Gy-OSs">
-                    <rect key="frame" x="16" y="21.5" width="534" height="16"/>
+                    <rect key="frame" x="0.0" y="22.5" width="566" height="14"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="33g-AP-K0g">
-                            <rect key="frame" x="0.0" y="0.0" width="534" height="16"/>
+                            <rect key="frame" x="0.0" y="0.0" width="566" height="14"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="16" id="BRF-9q-X7b"/>
+                                <constraint firstAttribute="height" constant="14" id="BRF-9q-X7b"/>
                             </constraints>
                         </view>
                     </subviews>
@@ -36,15 +36,15 @@
                         <constraint firstItem="33g-AP-K0g" firstAttribute="leading" secondItem="f3b-Gy-OSs" secondAttribute="leading" id="PuI-HA-QCF"/>
                         <constraint firstAttribute="trailing" secondItem="33g-AP-K0g" secondAttribute="trailing" priority="750" id="Qbd-JI-C86"/>
                         <constraint firstItem="33g-AP-K0g" firstAttribute="centerY" secondItem="f3b-Gy-OSs" secondAttribute="centerY" id="Vl2-uQ-m5l"/>
-                        <constraint firstAttribute="height" constant="16" id="fRn-tv-UTP"/>
+                        <constraint firstAttribute="height" constant="14" id="fRn-tv-UTP"/>
                     </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="f3b-Gy-OSs" secondAttribute="trailing" constant="16" id="2sR-Wo-dzL"/>
+                <constraint firstAttribute="trailing" secondItem="f3b-Gy-OSs" secondAttribute="trailing" id="2sR-Wo-dzL"/>
                 <constraint firstItem="f3b-Gy-OSs" firstAttribute="centerY" secondItem="EAO-yT-9tb" secondAttribute="centerY" id="SIk-hQ-kh2"/>
-                <constraint firstItem="f3b-Gy-OSs" firstAttribute="leading" secondItem="EAO-yT-9tb" secondAttribute="leading" constant="16" id="moF-GR-Otq"/>
+                <constraint firstItem="f3b-Gy-OSs" firstAttribute="leading" secondItem="EAO-yT-9tb" secondAttribute="leading" id="moF-GR-Otq"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="1899.2" y="-333.28335832083962"/>

@@ -9,11 +9,11 @@
 import UIKit
 
 protocol NewGoalRouter: NSObjectProtocol {
-    func navigateToViewController()
+    func navigateToHomeViewController()
 }
 
 protocol NewGoalView: BaseView {
-    func displaySomething(displayModel: NewGoalViewModel)
+    func displayGoalList(displayModel: [NewGoalListViewModel])
 }
 
 class NewGoalPresenter {
@@ -34,10 +34,19 @@ class NewGoalPresenter {
         self.view = view
     }
     
-    func getSomething() {
-        // TODO: Format the response from the Service and pass the result back to the View Controller
-        let viewModel = NewGoalViewModel()
-        view.displaySomething(displayModel: viewModel)
+    func getGoalList() {
+        self.service.getGoalList { (newGoalListModel) in
+            let newGoalListViewModel = newGoalListModel.map { (item) -> NewGoalListViewModel in
+                return NewGoalListViewModel(iconImage: item.iconImage, title: item.title)
+            }
+            self.view.displayGoalList(displayModel: newGoalListViewModel)
+        } fail: { (error) in
+            
+        }
+    }
+    
+    func saveNewGoal()  {
+        self.router.navigateToHomeViewController()
     }
 }
 

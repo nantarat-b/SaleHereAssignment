@@ -6,4 +6,12 @@
 //  Copyright © 2564 BE SaleHereAssignment. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class BaseHorizontalCollectionViewCell: UICollectionViewCell {
+    @IBOutlet weak var coverImage: UIImageView!
+    
+    public func setCoverImage(imageName: String) {
+        self.coverImage.image = UIImage(named: imageName)
+    }
+}

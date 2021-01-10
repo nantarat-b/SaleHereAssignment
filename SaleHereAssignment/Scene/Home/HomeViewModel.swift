@@ -9,10 +9,8 @@
 import UIKit
 
 struct HomeViewModel {
-    
-    struct GoalViewModel {
-        let items: [GoalViewModel]
-    }
+    let totalGoals: String
+    let savingPrice: String
 }
 
 struct GoalModel {
@@ -26,15 +24,30 @@ struct GoalModel {
 
 struct GoalViewModel {
     let iconImage: String
-    let discountPrice: Float
-    let price: Float
-    let riskLevel: Int
+    let discountPrice: String
+    let price: String
+    let progressPercent: CGFloat
     let riskType: RiskType
     let title: String
     let expiredDate: String
 }
 
-enum RiskType {
-    case Good
-    case Unhappy
+enum RiskType: String {
+    case good = "Good"
+    case unhappy = "Unhappy"
+}
+
+struct BestOfferModel {
+    let title: String
+    let coverImages: [String]
+}
+
+struct SuggestModel {
+    let title: String
+    let coverImages: [String]
+}
+
+struct OtherModel {
+    let title: String
+    let coverImages: [String]
 }

@@ -11,3 +11,13 @@ import UIKit
 struct NewGoalViewModel {
 
 }
+
+struct NewGoalListViewModel {
+    let iconImage: String
+    let title: String
+}
+
+struct NewGoalListModel {
+    let iconImage: String
+    let title: String
+}
